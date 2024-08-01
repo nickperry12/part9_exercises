@@ -19,12 +19,14 @@ const calculateBmi = (height: number, weight: number): string => {
     case (bmi >= 40):
       return 'Obese (Class III)';
     default:
-      return 'A valid weight or height was not provided';
+      throw new Error('A valid height or weight was not provided.');
   }
 };
 
-const height: number = Number(process.argv[2]);
-const weight: number = Number(process.argv[3]);
+// const height: number = Number(process.argv[2]);
+// const weight: number = Number(process.argv[3]);
 
-console.log(height, weight);
-console.log(calculateBmi(height, weight));
+// console.log(height, weight);
+// console.log(calculateBmi(height, weight));
+
+export { calculateBmi };
